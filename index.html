@@ -1,10 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>My Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Your Name | Homepage</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      color: #222;
+      background: #f7f7f7;
+    }
+
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #d1d5db;
+    }
+
+    nav {
+      background: #111827;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      padding: 24px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 6px;
+      color: #111827;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello, world!</h1>
-  <p>これは自分のホームページです。</p>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Graduate Student / Researcher in Astronomy</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        ここに自己紹介を書きます。所属、研究分野、興味のあるテーマなどを簡単に書くとよいです。
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        私の研究テーマは、系外惑星大気、トランジット観測、赤外線検出器などです。
+      </p>
+      <ul>
+        <li>Exoplanet atmospheres</li>
+        <li>Transit and eclipse observations</li>
+        <li>Infrared detector characterization</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>Your Name et al. 2026, Journal Name, Title of the Paper</li>
+        <li>Your Name et al. 2025, Journal Name, Title of the Paper</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: your.email@example.com<br>
+        GitHub: <a href="https://github.com/yourusername">yourusername</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Your Name
+  </footer>
+
 </body>
 </html>
