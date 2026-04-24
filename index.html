@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Homepage of Shotaro Tada, a researcher of exoplanets and astronomical instrumentation.">
+  <meta property="og:title" content="Shotaro Tada | Homepage">
+  <meta property="og:description" content="Research on exoplanets and astronomical instrumentation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sh-tada.github.io/">
 
-  <title>Your Name | Homepage</title>
+  <title>Shotaro Tada | Homepage</title>
 
   <style>
     body {
@@ -18,18 +23,31 @@
     header {
       background: #1f2937;
       color: white;
-      padding: 40px 20px;
+      padding: 42px 20px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.2rem;
+      font-weight: 600;
     }
 
     header p {
       margin-top: 8px;
+    }
+    
+    .subtitle-main {
+      display: block;
       color: #d1d5db;
+      font-size: 1.0rem;
+    }
+    
+    .subtitle-affiliation {
+      display: block;
+      color: #9ca3af;
+      font-size: 1.0rem;
+      margin-top: 4px;
     }
 
     nav {
@@ -40,7 +58,7 @@
 
     nav a {
       color: white;
-      margin: 0 12px;
+      margin: 0 14px;
       text-decoration: none;
       font-weight: 500;
     }
@@ -56,17 +74,44 @@
     }
 
     section {
-      background: white;
-      padding: 24px;
+      background: transparent;
+      padding: 24px 0 24px;
       margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-top: 1px solid #d1d5db;
+    }
+    
+    main > section:first-of-type {
+      border-top: none;
+      padding-top: 10px;
     }
 
     h2 {
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 6px;
       color: #111827;
+      font-size: 1.45rem;
+    }
+
+    h3 {
+      color: #374151;
+      font-size: 1.05rem;
+      margin-top: 10px;
+    }
+
+    h4 {
+      color: #4b5563;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #2563eb;
     }
 
     footer {
@@ -76,68 +121,329 @@
       font-size: 0.9rem;
     }
 
-    ul {
-      padding-left: 22px;
+    a:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      scroll-margin-top: 20px;
+    }
+
+    details.talks-toggle {
+      margin-top: 18px;
+    }
+    
+    details.talks-toggle summary {
+      cursor: pointer;
+      color: #2563eb;
+      font-weight: 500;
+    }
+    
+    details.talks-toggle summary:hover {
+      text-decoration: underline;
+    }
+    
+    details.talks-toggle > div {
+      margin-top: 10px;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Your Name</h1>
-    <p>Graduate Student / Researcher in Astronomy</p>
-  </header>
+<header>
+  <h1>Shotaro Tada</h1>
+  <p class="subtitle">
+    <span class="subtitle-main">Exoplanets and Astronomical Instrumentation</span>
+    <span class="subtitle-affiliation">Aerospace Project Research Associate, ISAS, JAXA</span>
+  </p>
+</header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav aria-label="Primary">
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#cv">CV</a>
+  <a href="#talks">Talks</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <main>
+<main>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        ここに自己紹介を書きます。所属、研究分野、興味のあるテーマなどを簡単に書くとよいです。
-      </p>
-    </section>
+<section id="research">
+  <h2>Research</h2>
+  <p>
+    My research centers on exoplanet characterization and astronomical instrumentation.
+  </p>
+  <p>
+    My current interests include observational studies of exoplanets, atmospheric inhomogeneity, and the development of infrared detectors and calibration techniques for astronomical instruments, including those for the JASMINE mission.
+  </p>
+</section>
 
-    <section id="research">
-      <h2>Research</h2>
-      <p>
-        私の研究テーマは、系外惑星大気、トランジット観測、赤外線検出器などです。
-      </p>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p>
+    See full list on:
+    <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&q=-docs(1de230bbbcaf80ca3d35cffc4af9566f)%20((author%3A%22Tada%2C%20Shotaro%22)%20AND%20year%3A2020-2026)&sort=date%20desc">
+      NASA ADS (full list)
+    </a>
+  </p>
+
+  <h3>Refereed Journal Articles</h3>
+
+  <h4>First-author Papers</h4>
+  <ul>
+    <li>
+      <b>Shotaro Tada</b>, Hajime Kawahara, Yui Kawashima, Takayuki Kotani, Kento Masuda,
+      “Probing Two-dimensional Asymmetries of an Exoplanet Atmosphere from Chromatic Transit Variation,”
+      <em>The Astronomical Journal</em>, 169, 255, 2025.
+      <a href="https://doi.org/10.3847/1538-3881/adbe65">doi</a>
+    </li>
+  </ul>
+
+  <h4>Co-authored Papers</h4>
+  <ul>
+    <li>
+      Hajime Kawahara, Yui Kawashima, <b>Shotaro Tada</b>, Hiroyuki Tako Ishikawa, Ko Hosokawa, Yui Kasagi, Takayuki Kotani, Kento Masuda, Stevanus K. Nugroho, Motohide Tamura, Hibiki Yama, Daniel Kitzmann, Nicolas Minesi, Brett M. Morris,
+      “Differentiable Modeling of Planet and Substellar Atmosphere,”
+      <em>The Astrophysical Journal</em>, 985, 263, 2025.
+      <a href="https://doi.org/10.3847/1538-4357/adc455">doi</a>
+    </li>
+
+    <!--<li>
+      Daisuke Kawata, Hajime Kawahara, Naoteru Gouda, Nathan J Secrest, Ryouhei Kano, Hirokazu Kataza, 
+      Naoki Isobe, Ryou Ohsawa, Fumihiko Usui, Yoshiyuki Yamada, Alister W Graham, Alex R Pettitt, 
+      Hideki Asada, Junichi Baba, Kenji Bekki, Bryan N Dorland, Michiko Fujii, Akihiko Fukui, Kohei Hattori, 
+      Teruyuki Hirano, Takafumi Kamizuka, Shingo Kashima, Norita Kawanaka, Yui Kawashima, Sergei A Klioner, Takanori Kodama, 
+      Naoki Koshimoto, Takayuki Kotani, Masayuki Kuzuhara, Stephen E Levine, Steven R Majewski, Kento Masuda, Noriyuki Matsunaga, 
+      Kohei Miyakawa, Makoko Miyoshi, Kumiko Morihana, Ryoichi Nishi, Yuta Notsu, Masashi Omiya, Jason Sanders, 
+      Ataru Tanikawa, Masahiro Tsujimoto, Taihei Yano, Masataka Aizawa, Ko Arimatsu, Michael Biermann, Celine Boehm, Masashi Chiba, 
+      Victor P Debattista, Ortwin Gerhard, Masayuki Hirabayashi, David Hobbs, Bungo Ikenoue, Hideyuki Izumiura, Carme Jordi, 
+      Naoki Kohara, Wolfgang Löffler, Xavier Luri, Ichiro Mase, Andrea Miglio, Kazuhisa Mitsuda, Trent Newswander, Shogo Nishiyama, 
+      Yoshiyuki Obuchi, Takafumi Ootsubo, Masami Ouchi, Masanobu Ozaki, Michael Perryman, Timo Prusti, Pau Ramos, Justin I Read, 
+      R Michael Rich, Ralph Schönrich, Minori Shikauchi, Risa Shimizu, Yoshinori Suematsu, <b>Shotaro Tada</b>, Aoi Takahashi, 
+      Takayuki Tatekawa, Daisuke Tatsumi, Takuji Tsujimoto, Toshihiro Tsuzuki, Seitaro Urakawa, Fumihiro Uraguchi, 
+      Shin Utsunomiya, Vincent Van Eylen, Floor van Leeuwen, Takehiko Wada, Nicholas A Walton,
+      “Near-infrared astrometry and time-series photometry science,”
+      <em>Publications of the Astronomical Society of Japan</em>, 76, 386, 2024.
+      <a href="https://doi.org/10.1093/pasj/psae020">doi</a>
+    </li>-->
+  </ul>
+
+  <h3>Conference Proceedings (non-refereed)</h3>
+  <ul>
+    <li>
+      Kohei Miyakawa, <b>Shotaro Tada</b>, Hirokazu Kataza, Ryouhei Kano, Takehiko Wada, Masanobu Ozaki, Takayuki Kotani, Hajime Kawahara, Fumihiko Usui, Yui Kasagi,
+      “Performance report of a substrate-removed InGaAs sensor for the JASMINE mission,”
+      <em>Proc. SPIE</em>, 13103, 2024.
+      <a href="https://doi.org/10.1117/12.3018195">doi</a>
+    </li>
+  </ul>
+
+</section>
+
+
+<section id="cv">
+  <h2>CV</h2>
+
+  <h3>Position</h3>
+  <p>
+    Apr 2025 – Present: Aerospace Project Research Associate, Institute of Space and Astronautical Science (ISAS), Japan Aerospace Exploration Agency (JAXA)
+  </p>
+
+  <h3>Education</h3>
+    <ul>
+    <li>
+        Apr 2020 – Mar 2025: Ph.D. in Astronomical Science,<br>
+        School of Physical Sciences, SOKENDAI (The Graduate University for Advanced Studies)
+    </li>
+    <li>
+        Apr 2016 – Mar 2020: B.Sc. in Earth and Planetary Physics,<br>
+        Faculty of Science, The University of Tokyo
+    </li>
+    </ul>
+
+  <h3>Grants</h3>
+  <ul>
+    <li>
+      KAKENHI Grant-in-Aid for Research Activity Start-up, Project No. 
+      <a href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-25K23414/">
+      25K23414</a>,
+      Principal Investigator, 2025–2027. 
+      Project: “<span lang="ja">系外惑星大気における光化学反応の役割の解明</span>”
+    </li>
+  </ul>
+</section>
+
+
+<section id="talks">
+  <h2>Talks</h2>
+
+  <h3>Recent Talks</h3>
+
+  <h4>International Conferences</h4>
+  <ul>
+    <li>
+      <b>Shotaro Tada</b>, Kohei Miyakawa, Hirokazu Kataza, Iona Kondo,
+      Fumihiko Usui, Yui Kasagi, Hajime Kawahara, Takehiko Wada,
+      Ryouhei Kano, Masanobu Ozaki, Takayuki Kotani and JASMINE team,
+      “Development of an InGaAs infrared detector for the JASMINE mission,”
+      Scientific Detector Workshop, Australian National University,
+      October 2025. Oral presentation.
+    </li>
+  </ul>
+
+  <h4>Domestic Conferences</h4>
+  <ul>
+    <li>
+      <b>Shotaro Tada</b>, Kohei Miyakawa, Hirokazu Kataza, Fumihiko Usui,
+      Iona Kondo, Hajime Kawahara, Yui Kasagi, Takehiko Wada,
+      Ryouhei Kano, Masanobu Ozaki, Takayuki Kotani, Ko Hosokawa,
+      Yuji Sakamoto and JASMINE team,
+      “<span lang="ja">JASMINE搭載検出器の開発状況: 2Kx2K画素素子の低温性能評価</span>,”
+      <span lang="ja">日本天文学会2026年春季年会</span>, V202a, Kyoto Sangyo University,
+      March 2026. Oral presentation.
+    </li>
+
+    <li>
+      <b>Shotaro Tada</b>,
+      “<span lang="ja">トランジットから惑星形状はどこまで分かるか</span>,”
+      <span lang="ja">系外惑星大気ワークショップFY2025</span>, Ritsumeikan University,
+      March 2026. Oral presentation.
+    </li>
+
+    <li>
+      <b>Shotaro Tada</b>,
+      “<span lang="ja">系外惑星大気の水平非一様性の推定</span>,”
+      CPS/WTK &amp; ABC <span lang="ja">ワークショップ『系外惑星表層環境の観測とモデリング』</span>,
+      Center for Planetary Science (CPS),
+      February 2026. Invited oral presentation.
+    </li>
+
+    <li>
+      <b>Shotaro Tada</b>, Kohei Miyakawa, Hirokazu Kataza, Fumihiko Usui,
+      Iona Kondo, Hajime Kawahara, Yui Kasagi, Takehiko Wada,
+      Ryouhei Kano, Masanobu Ozaki, Ko Hosokawa, Takayuki Kotani,
+      Yuji Sakamoto and JASMINE team,
+      “<span lang="ja">JASMINEに向けたInGaAs赤外線検出器の環境試験</span>,”
+      <span lang="ja">第19回可視赤外線観測装置技術ワークショップ</span>, Kyoto Sangyo University,
+      November 2025. Oral presentation.
+    </li>
+
+    <li>
+      <b>Shotaro Tada</b>, Hajime Kawahara, Yui Kawashima,
+      Takayuki Kotani, Kento Masuda,
+      “<span lang="ja">トランジット光度曲線の波長依存性から探る系外惑星大気の非一様性</span>,”
+      <span lang="ja">2025年度光赤天連シンポジウム</span>, <span lang="ja">キャンパスプラザ京都</span>,
+      November 2025. Oral presentation.
+    </li>
+
+    <li>
+      <b>Shotaro Tada</b>, Hajime Kawahara, Yui Kawashima,
+      Takayuki Kotani, Kento Masuda,
+      “Probing Two-dimensional Asymmetries of an Exoplanet Atmosphere from Chromatic Transit Variation,”
+      <span lang="ja">日本天文学会2025年秋季年会</span>, Z104a, <span lang="ja">海峡メッセ下関</span>,
+      September 2025. Oral presentation.
+    </li>
+  </ul>
+
+  <details class="talks-toggle">
+    <summary>Past Talks</summary>
+    <div>
+      <h4>International Conferences</h4>
       <ul>
-        <li>Exoplanet atmospheres</li>
-        <li>Transit and eclipse observations</li>
-        <li>Infrared detector characterization</li>
+      
       </ul>
-    </section>
 
-    <section id="publications">
-      <h2>Publications</h2>
+      <h4>Domestic Conferences</h4>
       <ul>
-        <li>Your Name et al. 2026, Journal Name, Title of the Paper</li>
-        <li>Your Name et al. 2025, Journal Name, Title of the Paper</li>
+        <li>
+          <b>Shotaro Tada</b>, Hajime Kawahara, Yui Kawashima,
+          Takayuki Kotani, Kento Masuda,
+          “<span lang="ja">JWSTによる透過光分光データが示す系外惑星大気の非一様性</span>,”
+          JASMINE Consortium Meeting, National Astronomical Observatory of Japan,
+          August 2024. Oral presentation.
+        </li>
+
+        <li>
+          <b>Shotaro Tada</b>, Takayuki Kotani, Ryouhei Kano, Kohei Miyakawa, Hirokazu Kataza, Hajime Kawahara, Takehiko Wada, Fumihiko Usui, Naoteru Gouda,
+          “Development of detector calibration techniques for planet search with JASMINE,”
+          Japan Geoscience Union Meeting 2023, PEM11-21, Makuhari Messe,
+          May 2023. Oral presentation.
+        </li>
+
+        <li>
+          <b>Shotaro Tada</b>, Takayuki Kotani, Hirokazu Kataza,
+          Takehiko Wada, Hajime Kawahara, Fumihiko Usui,
+          Naoki Gouda, Ryouhei Kano, Kohei Miyakawa and JASMINE team,
+          “<span lang="ja">JASMINEでの精密測光・位置天文に向けた検出器の新しい較正手法の開発</span>,”
+          <span lang="ja">日本天文学会2023年春季年会</span>, V250a, Rikkyo University,
+          March 2023. Oral presentation.
+        </li>
+
+        <li>
+          <b>Shotaro Tada</b>, Takayuki Kotani, Hirokazu Kataza,
+          Takehiko Wada, Hajime Kawahara, Fumihiko Usui,
+          Ryouhei Kano, Kohei Miyakawa, Naoki Gouda and JASMINE team,
+          “<span lang="ja">JASMINEでの精密測光・位置天文に向けた検出器特性の較正手法の開発</span>,”
+          <span lang="ja">第23回宇宙科学シンポジウム</span>, P-100, Online,
+          January 2023. Poster presentation.
+        </li>
+
+        <li>
+          <b>Shotaro Tada</b>, Takayuki Kotani, Hirokazu Kataza,
+          Takehiko Wada, Hajime Kawahara, Fumihiko Usui,
+          Ryouhei Kano, Kohei Miyakawa, Naoki Gouda and JASMINE team,
+          “<span lang="ja">JASMINEでの精密測光・位置天文に向けた新しいフラット補正技術と検出器特性精密測定方法の開発</span>,”
+          <span lang="ja">第11回可視赤外線観測装置技術ワークショップ</span>, Kyoto University,
+          December 2022. Oral presentation.
+        </li>
+
+        <li>
+          <b>Shotaro Tada</b>, Takayuki Kotani, Hirokazu Kataza,
+          Takehiko Wada, Fumihiko Usui, Naoki Gouda,
+          Ryouhei Kano, Kohei Miyakawa, Hajime Kawahara and JASMINE team,
+          “<span lang="ja">JASMINEでの精密測光・位置天文に向けた新しいフラット補正技術と検出器特性精密測定方法の開発</span>,”
+          <span lang="ja">日本天文学会2022年秋季年会</span>, Z222a, Online,
+          September 2022. Oral presentation.
+        </li>
+
+        <li>
+          <b>Shotaro Tada</b>, Takayuki Kotani, Yutaka Hayano, Yosuke Minowa,
+          “<span lang="ja">可視シングルモードファイバー高分散分光器に向けた高効率ファイバー入射光学系の開発</span>,”
+          <span lang="ja">日本天文学会2022年春季年会</span>, V208a, Online,
+          March 2022. Oral presentation.
+        </li>
+
+        <li>
+          <b>Shotaro Tada</b>, Takayuki Kotani, Yutaka Hayano, Yosuke Minowa,
+          “<span lang="ja">可視シングルモードファイバー高分散分光器に向けた高効率ファイバー入射光学系の開発</span>,”
+          <span lang="ja">第10回可視赤外線観測装置技術ワークショップ</span>, Online,
+          December 2021. Oral presentation.
+        </li>
       </ul>
-    </section>
+    </div>
+  </details>
+</section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: your.email@example.com<br>
-        GitHub: <a href="https://github.com/yourusername">yourusername</a>
-      </p>
-    </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    Email: tada[at]ir.isas.jaxa.jp<br>
+    GitHub: <a href="https://github.com/sh-tada">sh-tada</a><br>
+    ORCID: <a href="https://orcid.org/0000-0002-4093-8736">0000-0002-4093-8736</a>
+  </p>
+</section>
 
-  </main>
+</main>
 
-  <footer>
-    &copy; 2026 Your Name
-  </footer>
+<footer>
+  Last updated: <time datetime="2026-04">April 2026</time>
+</footer>
 
 </body>
 </html>
