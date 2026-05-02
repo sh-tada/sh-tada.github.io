@@ -12,143 +12,269 @@
   <title>Shotaro Tada | Homepage</title>
 
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      color: #222;
-      background: #f7f7f7;
+    :root {
+      --bg: #fafafa;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --line: #d6d9df;
+      --accent: #008380;
+      --header-accent: #eef9ee;
     }
-
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 42px 20px;
-      text-align: center;
+  
+    * {
+      box-sizing: border-box;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      font-weight: 600;
-    }
-
-    header p {
-      margin-top: 8px;
-    }
-    
-    .subtitle-main {
-      display: block;
-      color: #d1d5db;
-      font-size: 1.0rem;
-    }
-    
-    .subtitle-affiliation {
-      display: block;
-      color: #9ca3af;
-      font-size: 1.0rem;
-      margin-top: 4px;
-    }
-
-    nav {
-      background: #111827;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 14px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      background: transparent;
-      padding: 24px 0 24px;
-      margin-bottom: 20px;
-      border-top: 1px solid #d1d5db;
-    }
-    
-    main > section:first-of-type {
-      border-top: none;
-      padding-top: 10px;
-    }
-
-    h2 {
-      color: #111827;
-      font-size: 1.45rem;
-    }
-
-    h3 {
-      color: #374151;
-      font-size: 1.05rem;
-      margin-top: 30px;
-    }
-
-    h4 {
-      color: #4b5563;
-      font-size: 1rem;
-      margin-top: 12px;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    li {
-      margin-bottom: 12px;
-    }
-
-    a {
-      color: #2563eb;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    a:focus-visible {
-      outline: 2px solid #2563eb;
-      outline-offset: 2px;
-    }
-
+  
     html {
       scroll-behavior: smooth;
     }
-    section {
-      scroll-margin-top: 20px;
+  
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.75;
+    }
+  
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.18em;
+    }
+  
+    a:hover {
+      color: #123a5a;
+    }
+  
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
     }
 
+    a.special-link {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    a.special-link:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  
+    header {
+      padding: 44px 20px 38px;
+      color: var(--header-accent);
+      background: #2fa9a7;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 14px;
+      width: min(920px, 100%);
+      margin: 0 auto;
+    }
+
+    .header-copy {
+      text-align: left;
+    }
+  
+    header h1 {
+      margin: 0;
+      color: #f7fbf7;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      font-size: clamp(1.7rem, 3.8vw, 3rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+    }
+
+    .header-image {
+      width: clamp(88px, 16vw, 128px);
+      aspect-ratio: 1 / 1;
+      background-image: url("image.jpeg");
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      box-shadow: 0 10px 22px rgba(8, 18, 14, 0.14);
+    }
+  
+    main {
+      width: min(900px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 52px 0 64px;
+    }
+  
+    section {
+      margin-bottom: 84px;
+    }
+  
+    h2,
+    h3,
+    h4,
+    p,
+    ul {
+      margin-top: 0;
+    }
+  
+    h2 {
+      margin-bottom: 36px;
+      color: #111827;
+      background: transparent;
+      border-bottom: 5px double #111827;
+      font-size: clamp(1.35rem, 5vw, 1.65rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    h2::after {
+      content: none;
+    }
+  
+    h3 {
+      position: relative;
+      margin: 36px 0 14px;
+      padding: 0 0 6px 14px;
+      color: #111827;
+      font-size: 1.08rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--line);
+    }
+    h3::before {
+      position: absolute;
+      top: 0.35em;
+      left: 0;
+      width: 3px;
+      height: 1.1em;
+      content: "";
+      background: var(--accent);
+    }
+  
+    h4 {
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    ul {
+      padding-left: 1.25rem;
+    }
+  
+    li {
+      margin-bottom: 13px;
+    }
+  
+    b {
+      color: #111827;
+      font-weight: 750;
+    }
+  
+    em {
+      color: #374151;
+    }
+  
     details.talks-toggle {
+      margin-top: 22px;
+    }
+  
+    details.talks-toggle summary {
+      display: list-item;
+      width: fit-content;
+      color: var(--accent);
+      font-weight: 700;
+      cursor: pointer;
+      border-bottom: 1px solid currentColor;
+    }
+  
+    details.talks-toggle summary:hover {
+      color: #123a5a;
+    }
+  
+    details.talks-toggle > div {
       margin-top: 18px;
     }
-    
-    details.talks-toggle summary {
-      cursor: pointer;
-      color: #2563eb;
-      font-weight: 500;
+  
+    footer {
+      padding: 28px 20px 36px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+      border-top: 1px solid var(--line);
     }
-    
-    details.talks-toggle summary:hover {
-      text-decoration: underline;
+
+    .profile-list {
+      margin: 0;
     }
-    
-    details.talks-toggle > div {
-      margin-top: 10px;
+
+    .profile-list div {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .profile-list dt {
+      color: #111827;
+      font-weight: 700;
+    }
+
+    .profile-list dd {
+      margin: 0;
+    }
+
+    .contact {
+      margin-top: 36px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .pub-meta {
+      display: block;
+      margin-bottom: 0.05rem;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+  
+    @media (max-width: 640px) {
+      header {
+        padding: 36px 18px 30px;
+      }
+
+      .header-inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+      }
+
+      .header-image {
+        width: min(96px, 26vw);
+      }
+  
+      main {
+        width: min(100% - 24px, 900px);
+        padding-top: 38px;
+      }
+  
+      section {
+        margin-bottom: 52px;
+      }
+  
+      .profile-list div {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
     }
   </style>
 </head>
@@ -156,33 +282,84 @@
 <body>
 
 <header>
-  <h1>Shotaro Tada</h1>
-  <p class="subtitle">
-    <span class="subtitle-main">Exoplanets and Astronomical Instrumentation</span>
-    <span class="subtitle-affiliation">Aerospace Project Research Associate, ISAS, JAXA</span>
-  </p>
+  <div class="header-inner">
+    <div class="header-copy">
+      <h1><span lang="ja">多田 将太朗</span> <br> Shotaro Tada</h1>
+    </div>
+    <div class="header-image" aria-label="Portrait of Shotaro Tada"></div>
+  </div>
 </header>
 
-<nav aria-label="Primary">
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#cv">CV</a>
-  <a href="#talks">Talks</a>
-  <a href="#contact">Contact</a>
-</nav>
-
 <main>
+
+<section id="about">
+  <h2>About</h2>
+
+  <dl class="profile-list">
+
+    <div>
+      <dt>Research interests</dt>
+      <dd>Exoplanets, astronomical instrumentation</dd>
+    </div>
+
+    <div>
+      <dt>Hobbies</dt>
+      <dd><a href="https://higashiyamato-kyokushin.com/dojo/#tada" class="special-link">Karate</a>, working out</dd>
+    </div>
+
+    <div>
+      <dt>Message</dt>
+      <dd>Please feel free to contact me if you have any questions or are interested in collaboration.</dd>
+    </div>
+
+  </dl>
+
+
+  <dl class="profile-list contact">
+
+    <div>
+      <dt>Affiliation</dt>
+      <dd>Institute of Space and Astronautical Science (ISAS), JAXA</dd>
+    </div>
+
+    <div>
+      <dt>Position</dt>
+      <dd>Aerospace Project Research Associate</dd>
+    </div>
+
+    <div>
+      <dt>Email</dt>
+      <dd>tada[at]ir.isas.jaxa.jp <span class="muted">(replace [at] with @)</span></dd>
+    </div>
+
+    <div>
+      <dt>GitHub</dt>
+      <dd>
+        <a href="https://github.com/sh-tada">sh-tada</a>
+      </dd>
+    </div>
+
+    <div>
+      <dt>ORCID</dt>
+      <dd>
+        <a href="https://orcid.org/0000-0002-4093-8736">0000-0002-4093-8736</a>
+      </dd>
+    </div>
+  </dl>
+</section>
+
 
 <section id="research">
   <h2>Research</h2>
   <p>
-    My research centers on exoplanet characterization and astronomical instrumentation.
+    My research focuses on exoplanet characterization and astronomical instrumentation.
   </p>
-  <p>
-    My current interests include observational studies of exoplanets, atmospheric inhomogeneity, and the development of infrared detectors and calibration techniques for astronomical instruments, including those for the JASMINE mission.
-  </p>
+  <ul>
+    <li>Characterization of exoplanet atmospheres and their spatial inhomogeneities using transit observations</li>
+    <li>Information content of transit light curves for probing exoplanet silhouettes</li>
+    <li>Development and calibration of infrared detectors for astronomical missions such as JASMINE</li>
+  </ul>
 </section>
-
 
 <section id="publications">
   <h2>Publications</h2>
@@ -193,11 +370,13 @@
     </a>
   </p>
 
-  <h3>Refereed Journal Articles</h3>
+  <h3>Selected Publications</h3>
 
-  <h4>First-author Papers</h4>
+  <h4>First-author</h4>
+
   <ul>
     <li>
+      <span class="pub-meta">Journal Article · Peer-reviewed</span>
       <b>Shotaro Tada</b>, Hajime Kawahara, Yui Kawashima, Takayuki Kotani, Kento Masuda,
       “Probing Two-dimensional Asymmetries of an Exoplanet Atmosphere from Chromatic Transit Variation,”
       <em>The Astronomical Journal</em>, 169, 255, 2025.
@@ -205,9 +384,10 @@
     </li>
   </ul>
 
-  <h4>Co-authored Papers</h4>
+  <h4>Co-authored</h4>
   <ul>
     <li>
+      <span class="pub-meta">Journal Article · Peer-reviewed</span>
       Hajime Kawahara, Yui Kawashima, <b>Shotaro Tada</b>, Hiroyuki Tako Ishikawa, Ko Hosokawa, Yui Kasagi, Takayuki Kotani, Kento Masuda, Stevanus K. Nugroho, Motohide Tamura, Hibiki Yama, Daniel Kitzmann, Nicolas Minesi, Brett M. Morris,
       “Differentiable Modeling of Planet and Substellar Atmosphere,”
       <em>The Astrophysical Journal</em>, 985, 263, 2025.
@@ -215,6 +395,7 @@
     </li>
 
     <!--<li>
+      <span class="pub-meta">Journal Article · Peer-reviewed</span>
       Daisuke Kawata, Hajime Kawahara, Naoteru Gouda, Nathan J Secrest, Ryouhei Kano, Hirokazu Kataza, 
       Naoki Isobe, Ryou Ohsawa, Fumihiko Usui, Yoshiyuki Yamada, Alister W Graham, Alex R Pettitt, 
       Hideki Asada, Junichi Baba, Kenji Bekki, Bryan N Dorland, Michiko Fujii, Akihiko Fukui, Kohei Hattori, 
@@ -232,51 +413,16 @@
       <em>Publications of the Astronomical Society of Japan</em>, 76, 386, 2024.
       <a href="https://doi.org/10.1093/pasj/psae020">doi</a>
     </li>-->
-  </ul>
 
-  <h3>Conference Proceedings (non-refereed)</h3>
-  <ul>
     <li>
+      <span class="pub-meta">Conference Proceedings · Non-peer-reviewed</span>
       Kohei Miyakawa, <b>Shotaro Tada</b>, Hirokazu Kataza, Ryouhei Kano, Takehiko Wada, Masanobu Ozaki, Takayuki Kotani, Hajime Kawahara, Fumihiko Usui, Yui Kasagi,
       “Performance report of a substrate-removed InGaAs sensor for the JASMINE mission,”
       <em>Proc. SPIE</em>, 13103, 2024.
       <a href="https://doi.org/10.1117/12.3018195">doi</a>
     </li>
   </ul>
-
 </section>
-
-
-<section id="cv">
-  <h2>CV</h2>
-
-  <h3>Position</h3>
-  <p>
-    Apr 2025 - Present: Aerospace Project Research Associate, Institute of Space and Astronautical Science (ISAS), Japan Aerospace Exploration Agency (JAXA)
-  </p>
-
-  <h3>Education</h3>
-    <ul>
-    <li>
-        Apr 2020 - Mar 2025: Ph.D. in Astronomical Science, School of Physical Sciences, SOKENDAI (The Graduate University for Advanced Studies)
-    </li>
-    <li>
-        Apr 2016 - Mar 2020: B.Sc. in Earth and Planetary Physics, Faculty of Science, The University of Tokyo
-    </li>
-    </ul>
-
-  <h3>Grants</h3>
-  <ul>
-    <li>
-      KAKENHI Grant-in-Aid for Research Activity Start-up, Project No. 
-      <a href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-25K23414/">
-      25K23414</a>,
-      Principal Investigator, 2025-2027. 
-      Project: “<span lang="ja">系外惑星大気における光化学反応の役割の解明</span>”
-    </li>
-  </ul>
-</section>
-
 
 <section id="talks">
   <h2>Talks</h2>
@@ -354,7 +500,6 @@
     <div>
       <h4>International Conferences</h4>
       <ul>
-      
       </ul>
 
       <h4>Domestic Conferences</h4>
@@ -428,24 +573,41 @@
   </details>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    Please feel free to contact me if you have any questions or are interested in collaboration.
-  </p>
-  <p>
-    Email: tada[at]ir.isas.jaxa.jp<br>
-  </p>
-  <p>
-    GitHub: <a href="https://github.com/sh-tada">sh-tada</a><br>
-    ORCID: <a href="https://orcid.org/0000-0002-4093-8736">0000-0002-4093-8736</a>
-  </p>
+<section id="cv">
+  <h2>CV</h2>
+
+  <h3>Position</h3>
+  <ul>
+    <li>
+    Apr 2025 - Present: Aerospace Project Research Associate, Institute of Space and Astronautical Science (ISAS), Japan Aerospace Exploration Agency (JAXA)
+    </li>
+  </ul>
+
+  <h3>Education</h3>
+  <ul>
+    <li>
+      Apr 2020 - Mar 2025: Ph.D. in Astronomical Science, School of Physical Sciences, SOKENDAI (The Graduate University for Advanced Studies)
+    </li>
+    <li>
+      Apr 2016 - Mar 2020: B.Sc. in Earth and Planetary Physics, Faculty of Science, The University of Tokyo
+    </li>
+  </ul>
+
+  <h3>Grants</h3>
+  <ul>
+    <li>
+      KAKENHI Grant-in-Aid for Research Activity Start-up, Project No.
+      <a href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-25K23414/">25K23414</a>,
+      Principal Investigator, 2025-2027.
+      Project: “<span lang="ja">系外惑星大気における光化学反応の役割の解明</span>”
+    </li>
+  </ul>
 </section>
 
 </main>
 
 <footer>
-  Last updated: <time datetime="2026-04">April 2026</time>
+  Last updated: <time datetime="2026-05">May 2026</time>
 </footer>
 
 </body>
