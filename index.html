@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Homepage of Shotaro Tada, a researcher of exoplanets and astronomical instrumentation.">
-  <meta property="og:title" content="Shotaro Tada | Homepage">
+  <meta property="og:title" content="Shotaro Tada">
   <meta property="og:description" content="Research on exoplanets and astronomical instrumentation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sh-tada.github.io/">
 
-  <title>Shotaro Tada | Homepage</title>
+  <title>Shotaro Tada</title>
 
   <style>
     :root {
@@ -52,12 +52,10 @@
     }
 
     a.special-link {
-      color: var(--text);
       text-decoration: none;
     }
 
     a.special-link:hover {
-      color: var(--accent);
       text-decoration: none;
     }
   
@@ -179,6 +177,51 @@
       color: #374151;
     }
   
+    .research-lead {
+      margin-bottom: 24px;
+    }
+
+    .research-list {
+      margin-top: 10px;
+    }
+
+    .research-item {
+      padding: 20px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .research-item:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .research-item h3 {
+      margin: 0 0 12px;
+      padding: 0 0 0 12px;
+      border-bottom: 0;
+      border-left: 3px solid var(--accent);
+      font-size: 1.08rem;
+      line-height: 1.45;
+    }
+
+    .research-item h3::before {
+      content: none;
+    }
+
+    .research-item p {
+      margin-left: 15px;
+      margin-bottom: 0.85rem;
+    }
+
+    .research-item p:last-child {
+      margin-bottom: 0;
+    }
+
+    .research-ref {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
     details.talks-toggle {
       margin-top: 22px;
     }
@@ -284,7 +327,7 @@
     <div class="header-copy">
       <h1><span lang="ja">多田 将太朗</span> <br> Shotaro Tada</h1>
     </div>
-    <div class="header-image" aria-label="Portrait of Shotaro Tada"></div>
+    <div class="header-image" role="img" aria-label="Portrait"></div>
   </div>
 </header>
 
@@ -349,14 +392,75 @@
 
 <section id="research">
   <h2>Research</h2>
-  <p>
+
+  <p class="research-lead">
     My research focuses on exoplanet characterization and astronomical instrumentation.
   </p>
-  <ul>
-    <li>Characterization of exoplanet atmospheres and their spatial inhomogeneities using transit observations</li>
-    <li>Information content of transit light curves for probing exoplanet silhouettes</li>
-    <li>Development and calibration of infrared detectors for astronomical missions such as JASMINE</li>
-  </ul>
+
+  <div class="research-list">
+
+    <article class="research-item">
+      <h3>Atmospheric inhomogeneities revealed by transit observations</h3>
+
+        <p>
+          I developed a method to investigate horizontal inhomogeneities in exoplanet atmospheres using transit spectroscopy.
+          By measuring wavelength-dependent changes in transit timing, duration, and depth,
+          this approach compares the atmospheric properties at the morning and evening limbs as well as regions slightly offset from the terminator.
+        </p>
+
+        <p lang="ja">
+          トランジット観測を用いて、系外惑星大気の水平方向の非一様性を調べる手法を開発した。
+          波長ごとのトランジット時刻・継続時間・深さから、朝夕のリムや昼夜境界付近の大気特性の違いを読み解き、
+          大気循環や光化学反応の影響を探る。
+        </p>
+
+        <p class="research-ref">
+          Related work: Tada et al. 2025; Kawahara et al. 2025
+        </p>
+    </article>
+
+    <article class="research-item">
+      <h3>Information content of light curves for non-circular planetary silhouettes</h3>
+
+        <p>
+          I studied what information a transit light curve contains when the projected silhouette of a planet is not circular.
+          By interpreting ingress and egress as Radon-transform measurements, this work clarifies which components of the
+          two-dimensional attenuation map can be constrained and which remain degenerate.
+        </p>
+
+        <p lang="ja">
+          惑星のシルエットが円形とは限らない場合に、トランジットライトカーブから形状情報をどこまで引き出せるかを調べた。
+          Ingress/Egressをラドン変換として捉えることで、観測から制約できる成分や、
+          形状情報と軌道パラメータとの縮退などについて整理した。
+        </p>
+
+        <p class="research-ref">
+          Related work: Tada, submitted
+        </p>
+    </article>
+
+    <article class="research-item">
+      <h3>Infrared detector development for the JASMINE mission</h3>
+
+      <p>
+        I work on the development and characterization of infrared detectors for the JASMINE mission,
+        which requires high-precision near-infrared astrometry and photometry.
+        My work includes InGaAs sensor performance tests, characterization-method development,
+        and environmental testing for operation in space.
+      </p>
+      
+      <p lang="ja">
+        JASMINEミッションに向けて、近赤外線検出器の開発と性能評価に取り組んでいる。
+        InGaAsセンサーの低温性能評価、精密な較正手法の開発、
+        宇宙環境での動作を確認するための環境試験などを行っている。
+      </p>
+      
+      <p class="research-ref">
+        Related work: Miyakawa et al. 2024; Tada et al. in prep.
+      </p>
+    </article>
+
+  </div>
 </section>
 
 <section id="publications">
